@@ -3,5 +3,5 @@
 # Technologies:
 - HTML, CSS, Javascript
 - Quill JS for rich text formatting
-# Technologies:
-- Deployment: The website is deployed via GitHub Pages: https://alex-rrr999.github.io
+# Deployment:
+- The website is deployed via GitHub Pages: https://alex-rrr999.github.io
