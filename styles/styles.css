@@ -1,0 +1,145 @@
+:root {
+    --background-color: #011627;
+    --main-font-color: white;
+    --link-color: #A7DBF7;
+    --font-family: 'Fira Code', Consolas, monospace;
+    font-family: 'Fira Code', Consolas, monospace;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--main-font-color);
+    text-align: left;
+
+
+    overflow: auto;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    ::-webkit-scrollbar {
+      display: none; /* For Chrome, Safari, and Opera */
+
+
+
+  }
+}
+  
+
+/* change quill css */
+  .quill-editor { 
+    font: var(--font-family);
+    box-sizing: border-box;
+    height: 300px;
+    max-height: 100%;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .ql-toolbar svg {
+    filter: invert(98.2%) sepia(100%) saturate(20%) hue-rotate(358deg) brightness(92%) contrast(101%);
+  }
+
+.ql-toolbar .ql-header,
+.ql-toolbar .ql-size {
+  color: #fff !important;
+}
+
+
+.ql-picker-options {
+    color: #CCCCCC;
+}
+
+
+
+  
+
+  .box {
+    margin-bottom: 20px;
+    width: 100%;
+    
+  }
+  
+  #preview {
+    margin: 0 auto;
+    text-align: left;
+    font-size: 1rem !important;
+
+    border: solid 0.06rem;
+    border-color: white;
+    border-radius: 0rem;
+    max-width: 200rem;
+    min-height: 20rem;
+
+    color: var(--main-font-color);
+
+    padding-left: 1.6rem;
+    padding-top: 1.75rem;
+  }
+
+
+  
+  .button {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1rem;
+    /* border: solid; */
+    border-color: #CCCCCC;
+    border-radius: 0rem;
+    max-width: 20rem;
+    /* margin-top: 2rem; */
+    margin-bottom: 3rem;
+  }
+  
+  .footer {
+    text-align: center;
+    margin-top: 10rem;
+    margin-bottom: 15rem;
+    padding-bottom: 2.5rem;
+    font-size: 0.7rem;
+    margin: 0 auto;
+    
+  }
+
+  a {
+    color: rgb(245, 140, 193);
+  }
+
+
+
+  #download-preview {
+    cursor: pointer;
+    text-decoration: underline;
+    pointer-events: all;
+    color: #A7DBF7;
+  }
+  
+
+
+  #email {
+    display: inline-block;
+    text-align: left;
+    justify-content: left;
+    transition: ease 0.2s;
+    line-height: 2.5rem;
+    color: #c9c9c9;
+  
+    font-family: 'Fira Code', Consolas, monospace;
+    font-size: 2em;
+    /* font-variant-ligatures: contextual; */
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 15rem;
+    user-select: all;
+    pointer-events: all;
+  }
+  
