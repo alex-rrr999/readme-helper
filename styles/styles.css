@@ -43,7 +43,10 @@
     padding: 10px;
     font-size: 16px;
     line-height: 1.5;
+    font-family: 'Helvetica Neue', Consolas, monospace !important;
+
   }
+
 
   .ql-toolbar svg {
     filter: invert(98.2%) sepia(100%) saturate(20%) hue-rotate(358deg) brightness(92%) contrast(101%);
@@ -73,6 +76,7 @@
     margin: 0 auto;
     text-align: left;
     font-size: 1rem !important;
+    font-family: 'monospace', Consolas, monospace !important;
 
     border: solid 0.06rem;
     border-color: white;
@@ -143,3 +147,8 @@
     pointer-events: all;
   }
   
+/* 
+  pre {
+    white-space: pre-wrap;
+  }
+   */

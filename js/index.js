@@ -102,20 +102,36 @@ document.addEventListener("DOMContentLoaded", function() {
     editor.addEventListener("keyup", function() {
       var html = editor.innerHTML;
       var markdown = turndownService.turndown(html);
-      preview.innerHTML = markdown;
+    //   preview.innerHTML = markdown;
     });
-    
+
+
+
+
     editor.addEventListener("input", function() {
-      clearTimeout(timeoutID);
-      timeoutID = setTimeout(function() {
-        var html = editor.innerHTML;
-        var markdown = turndownService.turndown(html);
-        preview.innerHTML = markdown;
-      }, 0);
-    });
-    
-
-
+        clearTimeout(timeoutID);
+        timeoutID = setTimeout(function() {
+          var html = editor.innerHTML;
+          var markdown = turndownService.turndown(html);
+      
+          var paragraphs = editor.getElementsByTagName('p');
+          if (paragraphs.length > 0) {
+            var str = '';
+            for (var i = 0; i < paragraphs.length; i++) {
+              var paragraphMarkdown = turndownService.turndown(paragraphs[i].outerHTML);
+              if (paragraphs[i].textContent.trim() === '') {
+                str += '<br>';
+              } else {
+                str += '<p>' + paragraphMarkdown + '</p>';
+              }
+            }
+            preview.innerHTML = str;
+          } else {
+            preview.innerHTML = '<p>' + markdown + '</p>';
+          }
+        }, 0);
+      });
+      
 
 
     const emailLink = document.querySelector('.email');
@@ -196,4 +212,3 @@ document.addEventListener("DOMContentLoaded", function() {
 
   });
   
-
